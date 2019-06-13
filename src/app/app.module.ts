@@ -3,7 +3,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './ui/accueil/accueil.component';
@@ -11,9 +10,7 @@ import { AccesComponent } from './ui/acces/acces.component';
 import { TarifComponent } from './ui/tarif/tarif.component';
 import { LogementComponent } from './ui/logement/logement.component';
 import { ContactComponent } from './ui/contact/contact.component';
-import { LienComponent } from './ui/lien/lien.component';
-// import { PopupComponent } from './ui/popup/popup.component';
-// import { PopupService } from './ui/popup/popup.service';
+import { ActiviteComponent } from './ui/activite/activite.component';
 import { HeaderComponent } from './ui/inc/header/header.component';
 import { PieceComponent } from './ui/logement/piece/piece.component';
 
@@ -23,7 +20,7 @@ const appRoutes: Routes = [
   { path: 'tarifs',      component: TarifComponent },
   { path: 'contact',      component: ContactComponent },
   { path: 'logement',      component: LogementComponent },
-  { path: 'lien',      component: LienComponent },
+  { path: 'activites',      component: ActiviteComponent },
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '**', component: AccueilComponent }
 ];
@@ -36,8 +33,7 @@ const appRoutes: Routes = [
     TarifComponent,
     LogementComponent,
     ContactComponent,
-    LienComponent,
-    // PopupComponent,
+    ActiviteComponent,
     HeaderComponent,
     PieceComponent,
   ],
@@ -49,8 +45,8 @@ const appRoutes: Routes = [
       appRoutes,
     ),
   ],
-  // providers: [PopupService],
+  providers: [],
   bootstrap: [AppComponent],
-  // entryComponents: [PopupComponent],
+  entryComponents: [],
 })
 export class AppModule { }

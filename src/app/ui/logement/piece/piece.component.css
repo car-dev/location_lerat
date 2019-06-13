@@ -1,6 +1,12 @@
+::ng-deep .piece-ui-modal .modal-dialog { 
+    max-width: 50%;
+    width: 50%;
+}
+
 .piece-ui-btn {
     margin: 30px;
-    background-color: #AFACA5;
+    /* background-color: #AFACA5; */
+    background-color: #e6e8eeab;
 }
 
 .fa-camera {

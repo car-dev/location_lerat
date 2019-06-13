@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { Piece } from 'src/app/models/piece.model';
+import { Photo } from 'src/app/models/photo.model';
 
 @Component({
   selector: 'app-piece',
@@ -9,7 +9,7 @@ import { Piece } from 'src/app/models/piece.model';
 })
 export class PieceComponent implements OnInit {
 
-  @Input() piece: Piece;
+  @Input() photos: Photo[];
   closeResult: string;
 
   constructor(
@@ -20,7 +20,7 @@ export class PieceComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    this.modalService.open(content, { windowClass: 'piece-ui-modal', ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;

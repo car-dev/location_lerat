@@ -7,21 +7,31 @@
     color: black;
 }
 
-.list-group {
-    padding: .75rem 1.25rem;
+.logement-ui-title {
+    margin-top: 50px;
 }
 
-.list-group-item-custom {
+.logement-ui-li {
     position: relative;
     display: block;
-    padding: .75rem 1.25rem;
-    margin-bottom: -1px;
- }
-
-.logement-ui-icon {
-    margin-right: 50px;
+    list-style-type: none;
 }
 
-.logement-ui-ul {
-    font-size: 1.5rem;
+.logement-ui-icon {
+    margin-right: 20px;
+}
+
+.logement-ui-div-content {
+    /* background: rgb(175,172,165, 0.8) !important; */
+    /* background: rgb(84, 86, 90, 0.8) !important; */
+    background: #e6e8eeab !important;
+    color:black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+}
+
+.logement-ui-carousel {
+    text-align: center;
+    width: 100%;
 }

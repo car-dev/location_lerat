@@ -1,36 +1,77 @@
- <!-- Full Page Logement -->
- <div class="view logement-ui" >
-        <!-- Mask & flexbox options-->
-        <div class="mask rgba-black-light align-items-center">
-          <!-- Content -->
-          <div class="container">
-            <!--Grid row-->
-            <div class="row">
-              <!--Grid column-->
-              <div class="col-md-12 mb-4 white-text text-center">
-                <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>Description du logement</strong></h1>
-                <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
-                <br/>
+<!-- Full Page Logement -->
+<div class="view logement-ui" >
+  <!-- Content -->
+  <div class="container">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-md-12 mb-4 text-center">
+        <!-- Title -->
+        <div class="logement-ui-div-title">
+          <h1 class="h1-reponsive text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown logement-ui-title" data-wow-delay="0.3s"><strong>Description du logement</strong></h1>
+          <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+          <br/>
+        </div>
+        <!-- Content -->
+        <div class="logement-ui-div-content row">
+          <!-- Presentation -->
+          <div>
+            <ul class="text-left">              
+                <p class="logement-ui-li">Le logement est répartie sur plusieurs niveaux :</p>
+                <li class="logement-ui-li"><i class="fa fa-chevron-right logement-ui-icon"></i>Au Rez de Chaussée : Pièce de vie</li>
+                <li class="logement-ui-li"><i class="fa fa-chevron-right logement-ui-icon"></i>Au Rez de Jardin : Cuisine et Salle de Bains</li>
+                <li class="logement-ui-li"><i class="fa fa-chevron-right logement-ui-icon"></i>A l'Etage : Chambres et Mezzanine</li>
+            </ul>
+          </div>
+          <!-- Carousel -->
+          <div class="col-md-8">
+            <div class="container logement-ui-carousel">
+                <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+                  <!--Slides-->
+                  <div class="carousel-inner" role="listbox">
+                    <div *ngFor="let photo of photos; let i = index" [ngClass]="{'active': i == 0}" class="carousel-item">
+                        <img src="{{ photo.url }}" class="d-block w-100" alt="{{ photo.piece }}">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>{{ photo.piece }}</h5>
+                          <p>{{ photo.description }}</p>
+                        </div>
+                    </div>
+                  </div>
+                  <!--/.Slides-->
+                  <!--Controls-->
+                  <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                  <!--/.Controls-->
+                  <!--Wrappers-->
+                  <ol class="carousel-indicators text-center">
+                    <li *ngFor="let photo of photos; let i = index" [ngClass]="{'active': i == 0}" data-target="#carousel-thumb" attr.data-slide-to="{{ i }}">
+                      <img class="d-block w-100" src="{{ photo.url }}" class="img-fluid" />
+                    </li>
+                  </ol>
+                  <!--/.Wrappers-->
+                </div>
+              </div>
+            </div>
+          <!--/.Carousel-->
+        </div>           
 
-                <h4 class="h4-responsive list-group ">
-                La maison (T4) est répartie sur différents niveaux :
-                </h4>
-                <ul class="list-group text-left logement-ui-ul">
-                    <li class="list-group-item-custom"><i class="fa fa-chevron-right logement-ui-icon"></i>Au Rez de Chaussée : Pièce de vie</li>
-                    <li class="list-group-item-custom"><i class="fa fa-chevron-right logement-ui-icon"></i>Au Rez de Jardin : Cuisine et Salle de Bains</li>
-                    <li class="list-group-item-custom"><i class="fa fa-chevron-right logement-ui-icon"></i>A l'Etage : Chambres et Mezzanine</li>
-                </ul>
-                                
-
-                <app-piece *ngFor="let piece of pieces" [piece]="piece"></app-piece>
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </div>
+  </div>
+</div> 
