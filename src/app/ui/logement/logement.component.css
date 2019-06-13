@@ -1,0 +1,27 @@
+.logement-ui {
+    background-image: url('./../../../assets/img/piece_vie.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* color:rgb(15, 27, 58);   */
+    color: black;
+}
+
+.list-group {
+    padding: .75rem 1.25rem;
+}
+
+.list-group-item-custom {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+ }
+
+.logement-ui-icon {
+    margin-right: 50px;
+}
+
+.logement-ui-ul {
+    font-size: 1.5rem;
+}

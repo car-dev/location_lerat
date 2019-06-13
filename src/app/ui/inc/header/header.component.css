@@ -1,0 +1,6 @@
+.navbar-inverse {
+    background: linear-gradient(#1b2b57ab, rgb(15, 27, 58));
+    /* background: linear-gradient(217deg, rgba(49,100,187,.8), rgba(49,100,187,0) 90.71%),
+    linear-gradient(127deg, rgba(47,100,197,.8), rgba(47,100,197,0) 90.71%),
+    linear-gradient(336deg, rgba(47,100,197,.8), rgba(47,100,197,0) 90.71%); */
+}

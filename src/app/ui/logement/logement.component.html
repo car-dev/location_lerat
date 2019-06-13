@@ -1,0 +1,36 @@
+ <!-- Full Page Logement -->
+ <div class="view logement-ui" >
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-black-light align-items-center">
+          <!-- Content -->
+          <div class="container">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-md-12 mb-4 white-text text-center">
+                <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>Description du logement</strong></h1>
+                <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+                <br/>
+
+                <h4 class="h4-responsive list-group ">
+                La maison (T4) est répartie sur différents niveaux :
+                </h4>
+                <ul class="list-group text-left logement-ui-ul">
+                    <li class="list-group-item-custom"><i class="fa fa-chevron-right logement-ui-icon"></i>Au Rez de Chaussée : Pièce de vie</li>
+                    <li class="list-group-item-custom"><i class="fa fa-chevron-right logement-ui-icon"></i>Au Rez de Jardin : Cuisine et Salle de Bains</li>
+                    <li class="list-group-item-custom"><i class="fa fa-chevron-right logement-ui-icon"></i>A l'Etage : Chambres et Mezzanine</li>
+                </ul>
+                                
+
+                <app-piece *ngFor="let piece of pieces" [piece]="piece"></app-piece>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>

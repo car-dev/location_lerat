@@ -1,0 +1,38 @@
+
+
+<button type="button" class="btn btn-lg btn-default piece-ui-btn" (click)="open(content2)"><i class="fa fa-camera"></i>{{ piece.libelle }}</button>
+<!-- <hr> -->
+
+<!-- <pre>{{closeResult}}</pre> -->
+
+<ng-template #content2 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ piece.libelle }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div id="carouselControls2" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li *ngFor="let photo of piece.photos; index as i" data-target="#carouselControls2" attr.data-slide-to="{{ i }}" class="{{ (i == 0) ? 'active' : '' }}"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div *ngFor="let photo of piece.photos; let i = index" [ngClass]="{'active': i == 0}" class="carousel-item">
+          <img src="{{ photo }}" class="d-block w-100" alt="{{ piece.libelle }}">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselControls2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselControls2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Fermer click')">Fermer</button>
+    </div>
+  </div>
+</ng-template>
